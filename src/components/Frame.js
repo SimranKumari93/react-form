@@ -1,7 +1,7 @@
 import React , { useState , useEffect } from 'react'
 
 function Frame() {
-    const data = {name : "" , email: " ", password: " "};
+    const data = {name : " " , email: " ", password: " "};
     const [inputData , setInputData ] = useState(data);
     const [ flag , setFlag ] = useState(false)
     useEffect(() => { 
@@ -26,9 +26,11 @@ function Frame() {
         <div className='header'>
         <h1>Registration form</h1>
         </div>
-        <div><input type="text" value ={inputData.name} onChange={handleData} placeholder='Enter your name'>Name</input></div>
-        <div><input type="text" value={inputData.email} onChange={handleData} placeholder='Enter your email'>Email</input></div>
-        <div><input type="text" value={inputData.password} onChange={handleData} placeholder='Enter your password'>Password</input></div>
+        <div>Name:*  <input type="text" value ={inputData.name} onChange={handleData} placeholder='Enter your Name'/></div>
+        <div>Email:* <input type="text" value={inputData.email} onChange={handleData} placeholder='Enter your email'/></div>
+        <div>Password:* <input type="text" value={inputData.password} onChange={handleData} placeholder='Enter your password'/></div>
+        <p >Forgot Password?</p>
+        <button onClick={handleSubmit}>Submit</button>
     </form>
     </>
   )
