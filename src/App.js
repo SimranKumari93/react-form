@@ -1,15 +1,15 @@
 import React from "react";
 import './App.css';
 import Frame from './components/Frame';
-// import Form from "./components/Form";
-
- // import child from 'child.js'
+import About from "./components/About";
 
 function App() {
    
   return (
     <>
   <Frame/>
+  <About/>
+  
     </>
   );
 }
